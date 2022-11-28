@@ -60,7 +60,7 @@ resource "aws_route_table" "rt1" {
 
   route {
     cidr_block = "0.0.0.0/00"
-    gateway_id = aws_internet_gateway.igw.id
+    gateway_id = aws_internet_gateway.gw.id
   }
   tags = {
     Name = "custom"
@@ -68,7 +68,7 @@ resource "aws_route_table" "rt1" {
 
 }
 
-resource "aws_route_table" "2" {
+resource "aws_route_table" "rt2" {
   vpc_id = aws_vpc.vpc.id
 
   route {
